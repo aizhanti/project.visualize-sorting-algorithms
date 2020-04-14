@@ -17,10 +17,8 @@ class Sort {
   }
 
   quickSort(left, right) {
-    let pivot;
     if (left < right) {
-      //stores the position of pivot element
-      pivot = this.divide(left, right);
+      let pivot = this.divide(left, right); //stores the position of pivot element
       this.quickSort(left, pivot - 1); //sorts the right side of pivot.
       this.quickSort(pivot + 1, right); //sorts the left side of pivot.
     }
